@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+
+    <!-- GOOGLE FONT: POPPINS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ICON LIBRARY -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-200">
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 text-white"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="/img/logo.png" class="h-12 object-contain" alt="Logo" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 font-medium">
+          <li><a href="#" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#aboutus" class="hover:text-blue-500">About Us</a></li>
+          <li>
+            <a href="#facilities" class="hover:text-blue-500">Facilities</a>
+          </li>
+          <li><a href="#events" class="hover:text-blue-500">Events</a></li>
+          <li><a href="#teachers" class="hover:text-blue-500">Teachers</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact Us</a></li>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="md:hidden">
+          <i id="menuIcon" data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+      </div>
+    </nav>
+    <script>
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          // When navbar is not at top
+          navbar.classList.add("bg-[#0b0736]");
+          navbar.classList.remove("");
+        } else {
+          // When navbar is at top
+          navbar.classList.remove("bg-[#0b0736]");
+          navbar.classList.add("");
+        }
+      });
+    </script>
+
+    <!-- MOBILE SIDEBAR -->
+    <div
+      id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-gray-300 backdrop-blur-lg transform -translate-x-full transition-all duration-300 z-40 p-6"
+    >
+      <ul class="flex flex-col gap-5 text-lg mt-16 font-medium">
+        <li><a href="#" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#aboutus" class="hover:text-blue-500">About Us</a></li>
+        <li>
+          <a href="#facilities" class="hover:text-blue-500">Facilities</a>
+        </li>
+        <li><a href="#events" class="hover:text-blue-500">Events</a></li>
+        <li><a href="#teachers" class="hover:text-blue-500">Teachers</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- BACKDROP OVERLAY -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black/50 hidden z-30 backdrop-blur-sm"
+    ></div>
+
+    <!-- HERO SECTION -->
+    <section class="h-screen w-full relative">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="./img/heroBg.jpg"
+          alt="bg"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative h-full flex flex-col justify-center items-start max-w-4xl mx-auto px-6 text-white"
+      >
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-snug mb-4 capitalize"
+        >
+          <span
+            class="bg-gradient-to-r from-white to-[#2575fc] bg-clip-text text-transparent"
+          >
+            Central Vidhyalaya
+          </span>
+          shapes students through innovative education and dedicated guidance.
+        </h1>
+
+        <button
+          class="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] hover:scale-105 transition text-white font-medium px-6 py-3 rounded-full mt-4"
+        >
+          Contact us
+        </button>
+      </div>
+    </section>
+
+    <!-- about us  -->
+    <div class="bg-blue-200">
+      <section
+        id="aboutus"
+        class="w-full py-16 px-4 flex flex-col items-center text-center"
+      >
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#0b0736]">
+          About Us
+        </h2>
+
+        <!-- Small line under heading -->
+        <div class="w-12 h-[2px] bg-[#0b0736] mt-4 mb-6"></div>
+
+        <!-- Paragraph -->
+        <p class="max-w-2xl text-gray-700 text-base md:text-lg leading-relaxed">
+          At
+          <span
+            class="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent"
+          >
+            Central Vidhyalaya </span
+          >, we are committed to nurturing confident, creative, and responsible
+          learners. With a strong focus on academic excellence, moral values,
+          and holistic development, we provide an environment where every child
+          feels encouraged to explore, innovate, and grow. Our dedicated
+          teachers, modern classrooms, and activity-based learning approach
+          ensure that students develop not only knowledge, but also essential
+          life skills for a bright future.
+        </p>
+      </section>
+    </div>
+
+    <section id="facilities" class="max-w-7xl mx-auto p-6">
+      <!-- Heading -->
+
+      <header class="mb-8 flex flex-col items-center justify-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#0b0736]">
+          Our Facilities
+        </h2>
+
+        <!-- Small line under heading -->
+        <div class="w-12 h-[2px] bg-[#0b0736] mt-4 mb-6"></div>
+        <p class="mt-2 text-gray-600">
+          A supportive, safe and inspiring environment for every student.
+        </p>
+      </header>
+
+      <!-- Grid of cards -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card: Smart Classrooms -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-violet-600 to-blue-500 grid place-items-center text-white"
+            >
+              <!-- icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6M7 21h10"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Smart Classrooms</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                Interactive boards, projectors and modern learning tools to make
+                lessons engaging.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Digital</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Interactive</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Science & Computer Labs -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-green-600 to-emerald-500 grid place-items-center text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 12h6M9 16h6M12 4v4"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Science & Computer Labs</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                Fully equipped labs for hands-on experiments, robotics and
+                computer studies.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Practical</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Robotics</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Library -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-orange-500 to-pink-500 grid place-items-center text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Library</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                Quiet reading zones, extensive print collection and e-learning
+                resources for all grades.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >E-Resources</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Reading Zones</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Sports Facilities -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-sky-600 to-indigo-500 grid place-items-center text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 11l3-3 3 3m0 0v6a2 2 0 01-2 2H8a2 2 0 01-2-2v-6l3-3 3 3z"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Sports & Playgrounds</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                Outdoor fields, indoor courts and coaching for football,
+                cricket, badminton and athletics.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Outdoor</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Coaching</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Transport -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-rose-600 to-red-500 grid place-items-center text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 13h2l1 3h11l1-3h2"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Transport with GPS</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                Safe and reliable bus service with route tracking and trained
+                staff.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >GPS</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Trained Staff</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Medical & Safety -->
+        <article
+          class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-none w-14 h-14 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-400 grid place-items-center text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Health & Safety</h3>
+              <p class="mt-1 text-sm text-gray-600">
+                On-site infirmary, first-aid trained staff and strict safety
+                protocols across campus.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >Infirmary</span
+                >
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full"
+                  >CCTV</span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+      <header class="mb-8 flex flex-col items-center justify-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#0b0736]">
+          Events
+        </h2>
+
+        <!-- Small line under heading -->
+        <div class="w-12 h-[2px] bg-[#0b0736] mt-4 mb-6"></div>
+        <p class="mt-2 text-gray-600">
+          A supportive, safe and inspiring environment for every student.
+        </p>
+      </header>
+      <!-- ROW 1 (Image Left, Text Right) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Image -->
+        <img
+          src="./img/annual.jpg"
+          alt="School Event"
+          class="w-full h-64 md:h-80 object-cover rounded-xl shadow-md"
+        />
+
+        <!-- Content -->
+        <div class="space-y-3">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Annual Sports Day
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            Our Annual Sports Day brings together students from all grades to
+            participate in exciting competitions, building teamwork, discipline,
+            and leadership skills.
+          </p>
+        </div>
+      </div>
+
+      <!-- ROW 2 (Text Left, Image Right - Alternate) -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:flex-row-reverse"
+      >
+        <!-- Content -->
+        <div class="space-y-3 order-2 md:order-1">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Science Exhibition
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            A platform for young innovators to showcase their scientific models,
+            experiments, and creative ideas that inspire curiosity and learning.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <img
+          src="./img/exivition.jpg"
+          alt="School Event"
+          class="w-full h-64 md:h-80 object-cover rounded-xl shadow-md order-1 md:order-2"
+        />
+      </div>
+    </section>
+
+    <!-- TEACHER CARDS SLIDER SECTION -->
+    <!-- TEACHER CARDS SLIDER (JAVASCRIPT VERSION) -->
+    <section id="teachers" class="w-full overflow-hidden bg-gray-100 py-10">
+      <header class="mb-8 flex flex-col items-center justify-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#0b0736]">
+          Our Teachers
+        </h2>
+
+        <!-- Small line under heading -->
+        <div class="w-12 h-[2px] bg-[#0b0736] mt-4 mb-6"></div>
+        <p class="mt-2 text-gray-600">
+          A supportive, and inspiring faculties for every student.
+        </p>
+      </header>
+
+      <!-- Slider Wrapper -->
+      <div id="teacherSlider" class="flex gap-6 w-max">
+        <!-- CARD (Duplicate these) -->
+        <div
+          class="teacher-card bg-white shadow-lg rounded-xl p-5 w-64 flex-shrink-0 cursor-pointer"
+        >
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="./img/shivani.jpg"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+          <h3 class="text-center text-xl font-bold">Riya Sharma</h3>
+          <p class="text-center text-gray-600">Mathematics Teacher</p>
+          <p class="text-center text-sm text-gray-500">M.Sc Mathematics</p>
+        </div>
+
+        <div
+          class="teacher-card bg-white shadow-lg rounded-xl p-5 w-64 flex-shrink-0 cursor-pointer"
+        >
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="./img/Ayush-Gupta.jpg"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+          <h3 class="text-center text-xl font-bold">Amit Verma</h3>
+          <p class="text-center text-gray-600">Science Teacher</p>
+          <p class="text-center text-sm text-gray-500">M.Sc Physics</p>
+        </div>
+
+        <div
+          class="teacher-card bg-white shadow-lg rounded-xl p-5 w-64 flex-shrink-0 cursor-pointer"
+        >
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="./img/ruchi.jpg"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+          <h3 class="text-center text-xl font-bold">Priya Singh</h3>
+          <p class="text-center text-gray-600">English Teacher</p>
+          <p class="text-center text-sm text-gray-500">M.A English</p>
+        </div>
+
+        <div
+          class="teacher-card bg-white shadow-lg rounded-xl p-5 w-64 flex-shrink-0 cursor-pointer"
+        >
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="./img/anurag.jpg"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+          <h3 class="text-center text-xl font-bold">Rakesh Kumar</h3>
+          <p class="text-center text-gray-600">Computer Teacher</p>
+          <p class="text-center text-sm text-gray-500">B.Tech CSE</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const slider = document.getElementById("teacherSlider");
+
+      let speed = 1; // Adjust speed
+      let scrollAmount = 0;
+
+      function startSlider() {
+        slider.style.transform = `translateX(-${scrollAmount}px)`;
+        scrollAmount += speed;
+
+        // If full width is scrolled, reset (infinite loop)
+        if (scrollAmount >= slider.scrollWidth / 2) {
+          scrollAmount = 0;
+        }
+
+        requestAnimationFrame(startSlider);
+      }
+
+      // Clone cards for infinite loop
+      const clone = slider.cloneNode(true);
+      slider.appendChild(clone);
+
+      // Hover stop / start feature
+      slider.addEventListener("mouseenter", () => {
+        speed = 0;
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        speed = 1;
+      });
+
+      startSlider();
+    </script>
+
+    <section class="bg-gray-100 py-16" id="contact">
+      <div class="max-w-6xl mx-auto px-3 sm:px-6">
+        <h2 class="text-4xl font-bold text-center mb-10"></h2>
+        <header class="mb-8 flex flex-col items-center justify-center">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-[#0b0736]">
+            Contact Us
+          </h2>
+
+          <!-- Small line under heading -->
+          <div class="w-12 h-[2px] bg-[#0b0736] mt-4 mb-6"></div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- LEFT — CONTACT DETAILS -->
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+
+            <div class="space-y-6">
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-gray-600 text-white p-3 rounded-full flex items-center justify-center"
+                >
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg">Our Address</h4>
+                  <p class="text-gray-600">
+                    Central Vidhyalaya, MIG Road, Bhopal
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-gray-600 text-white p-3 rounded-full flex items-center justify-center"
+                >
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg">Phone Number</h4>
+                  <p class="text-gray-600">+91 98765 43210</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-gray-600 text-white p-3 rounded-full flex items-center justify-center"
+                >
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg">Email</h4>
+                  <p class="text-gray-600">cvsupport@.edu</p>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              lucide.createIcons();
+            </script>
+          </div>
+
+          <!-- RIGHT — CONTACT FORM -->
+          <form class="bg-white shadow-xl rounded-xl p-8">
+            <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Name -->
+              <div>
+                <label class="text-gray-700 font-medium">Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="w-full p-3 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="text-gray-700 font-medium">Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full p-3 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="mt-6">
+              <label class="text-gray-700 font-medium">Phone</label>
+              <input
+                type="tel"
+                placeholder="Enter your mobile number"
+                class="w-full p-3 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <!-- Message -->
+            <div class="mt-6">
+              <label class="text-gray-700 font-medium">Message</label>
+              <textarea
+                rows="5"
+                placeholder="Write your message here..."
+                class="w-full p-3 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Button -->
+
+            <button
+              type="submit"
+              class="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] hover:scale-105 transition text-white font-medium px-6 py-3 rounded-full mt-4"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 pt-14 pb-6">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
+      >
+        <!-- COL 1 — LOGO + ABOUT -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">Central Vidhyalaya</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Providing quality education with discipline, creativity, and modern
+            learning methods to shape confident future leaders.
+          </p>
+
+          <!-- Social Icons -->
+          <!-- Social Icons -->
+          <div class="flex gap-4 mt-6 flex-wrap">
+            <!-- Facebook -->
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+            </a>
+
+            <!-- Twitter / X -->
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <i data-lucide="twitter" class="w-5 h-5 text-white"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <i data-lucide="youtube" class="w-5 h-5 text-white"></i>
+            </a>
+          </div>
+
+          <script>
+            lucide.createIcons();
+          </script>
+        </div>
+
+        <!-- COL 2 — QUICK LINKS -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white">Home</a></li>
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Facilities</a></li>
+            <li><a href="#" class="hover:text-white">Events</a></li>
+            <li><a href="#" class="hover:text-white">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 3 — IMPORTANT LINKS -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Important</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white">Admissions</a></li>
+            <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+            <li><a href="#" class="hover:text-white">School Policies</a></li>
+            <li><a href="#" class="hover:text-white">Online Classes</a></li>
+            <li><a href="#" class="hover:text-white">Results</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 4 — CONTACT INFORMATION -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Contact Us</h3>
+
+          <!-- Address -->
+          <p class="text-gray-400 mb-3 flex gap-2">
+            <i data-lucide="map-pin" class="w-7 h-7"></i>
+            Central Vidhyalaya, MIG Road, Bhopal
+          </p>
+
+          <!-- Phone -->
+          <p class="text-gray-400 mb-3 flex gap-2">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            +91 98765 43210
+          </p>
+
+          <!-- Email -->
+          <p class="text-gray-400 flex gap-2">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            cvsupport@.edu
+          </p>
+        </div>
+
+        <script>
+          lucide.createIcons();
+        </script>
+      </div>
+
+      <!-- COPYRIGHT BAR -->
+      <div
+        class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-400"
+      >
+        © 2025 Central Vidhyalaya — All Rights Reserved.
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      const menuBtn = document.getElementById("menuBtn");
+      const menuIcon = document.getElementById("menuIcon");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      // OPEN/CLOSE SIDEBAR
+      menuBtn.addEventListener("click", () => {
+        const isOpen = sidebar.classList.contains("translate-x-0");
+
+        if (isOpen) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+
+      function openSidebar() {
+        sidebar.classList.remove("-translate-x-full");
+        sidebar.classList.add("translate-x-0");
+        overlay.classList.remove("hidden");
+
+        // Change icon to "X"
+        menuBtn.innerHTML = `<i data-lucide="x" class="w-8 h-8"></i>`;
+        lucide.createIcons();
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+
+        // Change icon back to "Menu"
+        menuBtn.innerHTML = `<i data-lucide="menu" class="w-8 h-8"></i>`;
+        lucide.createIcons();
+      }
+
+      // CLICK OUTSIDE SIDEBAR TO CLOSE
+      overlay.addEventListener("click", () => {
+        closeSidebar();
+      });
+    </script>
+  </body>
+</html>
